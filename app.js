@@ -161,9 +161,9 @@ app.get('/:postid', (req, res) => {
     
 })
 
-app.listen(process.env.YOUR_PORT || process.env.PORT || port, () => {
-    console.log('Listening to server on port ' + port)
-})
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 
 
