@@ -1,0 +1,66 @@
+* {
+  outline: 0px solid orange;
+}
+body {
+  font-family: 'DM Sans';
+  margin: 0;
+  padding: 0;
+  background-image: url('');
+  box-sizing: border-box;
+}
+li {
+  border: 1px solid grey;
+}
+.header {
+  background-color: white;
+  padding: 15px;
+  font-size: 1.25rem;
+  color: purple;
+  text-align: center;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .todoList {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .todoList {
+    width: 40%;
+  }
+}
+.todoList {
+  /* max-width: 40%; */
+  /* background-color: red; */
+  margin: auto;
+  padding: 30px;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+}
+ul {
+  background-color: white;
+  padding: ;
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  padding: 15px;
+  /* margin-bottom: 25px; */
+}
+input[type='text'] {
+  padding: 15px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form {
+  margin-bottom: 50px;
+}
+.submit {
+  width: 100%;
+  border-radius: 0 0px 0px 0;
+  padding: 17px;
+  border: none;
+}
