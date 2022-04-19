@@ -161,8 +161,9 @@ app.get('/:postid', (req, res) => {
     
 })
 
-
-app.listen(port, () => {
-    console.log('Port ' + port + ' is active')
+app.listen(process.env.YOUR_PORT || process.env.PORT || port, () => {
+    console.log('Listening to server on port ' + port)
 })
+
+
 
