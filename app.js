@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
@@ -8,9 +9,9 @@ const port = 2022;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
+// console.log(process.env.myAPIkey)
 
-mongoose.connect('mongodb+srv://todolist:todolist@todolist.rh2p8.mongodb.net/todoDB');
-
+mongoose.connect(process.env.myAPIkey)
 
 const todoSchema = new mongoose.Schema({
     item_name : {
@@ -161,7 +162,7 @@ app.get('/:postid', (req, res) => {
     
 })
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || port, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
