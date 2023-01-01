@@ -16,7 +16,7 @@ mongoose.connect(process.env.myAPIkey)
 const todoSchema = new mongoose.Schema({
     item_name : {
         type: String,
-        required: trueadsasdads
+        required: 
     }, 
 });
 
